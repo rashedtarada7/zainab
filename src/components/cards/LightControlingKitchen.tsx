@@ -8,7 +8,7 @@ export default function LightControlingKitchen() {
   const toggleLight = async () => {
     try {
       const serverAddress = "http://192.168.1.163:5000";
-      await axios.get(`${serverAddress}/${isLightOn ? "ledkon" : "ledkoff"}`);
+      await axios.get(`${serverAddress}/${isLightOn ? "ledkoff" : "ledkon"}`);
       setIsLightOn(!isLightOn);
     } catch (error) {
       console.error("Error toggling light:", error);
